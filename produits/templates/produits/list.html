@@ -1,0 +1,22 @@
+{% extends "produits/base.html" %}
+{% load static %}
+{% block title %}My Product{% endblock %}
+{% block content %}
+<h1>My Product</h1>
+
+<div class="card-container">
+{% for p in products %}
+
+<div class="card" >
+    <img src="{% static 'media\images.png' %}" alt="{{ p.nom }}">
+    <h2>{{ p.nom }}</h2>
+    <p>{{ p.description }}</p>
+    <a href="#" class="btn btn-primary">Modifier</a>
+    <a href="#" class="btn btn-primary">Supprimer</a>
+</div>
+
+{% endfor %}
+</div>
+{% include "produits/pagination.html" with page=products%}
+
+{% endblock %}

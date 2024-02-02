@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{% static 'css\produit.css' %}">
+</head>
+<body>
+
+<div id="content">
+{% block content %}
+{% endblock %}
+</div>
+{% comment %}  
+<div id="sidebar">
+<h2>My Product</h2>
+<p>This is my Product.</p>
+</div>{% endcomment %}
+
+</body>
+</html>
